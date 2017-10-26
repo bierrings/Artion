@@ -1,0 +1,59 @@
+
+\textbf{Penny Bid Auction with art} \\
+Our application is the future of online painting auctions. Penny bid auctions are seen before and still exist in foreign countries, but we have made a twist on the concept. The concept of our application is to provide a platform for amateur artists or individuals to sell their paintings at low prices but with high earnings because of the penny bid concept.\\  
+
+\textbf{Auctions and Prices}\\
+The start price of an action is always 0 kr. Our idea of creating this platform is that prices are different from other similar platforms. If a potential buyer wants the product, the buyer has to submit a bid. One bid costs 5 kr. For each bid a potential buyer submit for a given painting, the price of the painting increases with 0,10 Kr. A bidder can submit as many bids as he wants, but he pays 5 kr. each time he submits a bid. Let's take an example: if an auction ends with a selling price at 100 kr., the earnings for the seller will be 5.100 kr.
+\begin{equation}
+Earnings = ((\frac{100}{0,10}) * 5)+100=5.100\ kr.
+\end{equation}
+The sellers profit primarily consists of the bidders bids at the given auction.\\
+
+\textbf{Prices}
+\begin{itemize}
+    \item Opening price for an action: 0 kr.
+    \item Raise in selling price per. submitted bid: 0,10 kr. (10 øre)
+    \item Price per. bid: 5 kr.
+\end{itemize}
+
+Equation for the seller's earnings: 
+\begin{equation}\label{sellersEarnings}
+    Earnings = ((\frac{Selling\ price}{0,10}) * Bid\ price)+Selling\ price
+\end{equation}
+
+An auction automatically ends seven days after it is created. If a bid is submitted with less than two minutes left, the expiration time of the auction is extended to two minutes - this continues until no more bids are submitted. The last bidder buys the concerned painting. \\
+
+The winner of an auction can in principle buy a painting for 5 kr. (bid price + selling price). On the other side, there might be many other bidders who pays to bid but don't actually buy the concerned painting.\\
+
+\textbf{Advantages and the background of the project}\\
+The concept behind the penny-bid-auction have, by ethical code, been a 'grey area'. We want to change that vision.\\
+
+On previous penny-bid-auctions websites in Denmark, the companies themselves have been the seller of all products - therefore, private individuals couldn't sell their own paintings.\\
+
+This has resulted in several examples where companies have implemented bid-robots, that aim to submit bids on auctions to raise the selling price and to encourage other users to submit more bids. In this way the company earns even more on an auction because they don't pay for the bids submitted by the robots, but they cheat other users to submit more bids.\\
+
+We eliminate this problem by not being the seller of the products, in this case, paintings. In our application individuals are the sellers, therefore, it wouldn't be profitable for us to implement bid-robots.  \\
+
+\textbf{Users}\\
+We expect to have the following two types of users as our primary target group.\\
+
+\begin{enumerate}
+\item People who wants to gamble and get the opportunity to sell a painting and possibly get a higher earnings than they would get at a regular auction or sales advertisement.
+Our concept allows the sellers to earn a lot more on a painting, than he could in comparison to other types of sales. This is spite of a very low selling price and a potentially cheap painting for the buyer. 
+
+\textbf{Example}: A painting sold for 200 kr., gives the seller a profit of 10.200 Kr.\\
+\item People who wants to gamble and get the opportunity to buy a painting at a lower price than they could on a regular auction or sales advertisement. 
+Our concept allows the buyers to buy a given painting at a much cheaper price than he could find elsewhere. 
+
+\textbf{Example}: Even if the seller has earned far above the expected selling price, the buyer will be able to buy the product for 5 Kr. (Bid price) + the likely low selling price.\\
+\end{enumerate}
+
+\textbf{Possible challenges}\\
+
+\textbf{Idea for design and construction}\\
+First side: Vertical list with all the auctions. From the top are the auctions who are about to expire. From there the user can choose categories or scroll down through the auctions.\\
+
+\textbf{Terms of payment}\\
+When an auction has ended, the amount of money paid by the bidders will be locked by the company. The seller will receive the money when both the seller and the buyer has confirmed the deal.\\  
+
+\textbf{Terms of bids}\\
