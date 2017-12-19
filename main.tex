@@ -1,46 +1,67 @@
-\documentclass[a4paper,12pt,fleqn,dvipsnames,oneside,openright]{memoir} 
-%\usepackage[utf8]{inputenc}
-%\usepackage{graphicx}
-%\usepackage{pdfpages}
-%\usepackage{setspace}
-%\usepackage{geometry}
+\documentclass[a4paper,11pt,fleqn,dvipsnames,oneside,openright]{memoir} 
+\usepackage[export]{adjustbox}
+\usepackage{tabu}
 \usepackage{Preamble}
+\usepackage{graphicx}
+\usepackage[bottom]{footmisc}
+\usepackage[demo]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+
+\newcommand{\forceindent}{\leavevmode{\parindent=1em\indent}}
 
 \addbibresource{references.bib} %Tilføjer kildeliste
 
-\title{Artion}
-\author{Mads, Lukas and Morten}
-\date{December 2017}
-
-\usepackage{graphicx}
-
 \begin{document}
+
+\title{Artion}
 \maketitle
 
-\section*{\centerline{Innovation and new technology}}
+\section*{Innovation and new technology}
+
+Business Administration and Information Systems, HA(it.) \\
+5th semester exam report\\
+Teachers: Chee -Wee Tan\\
+Excercise tutor: Albert Fei Liu\\
+Copenhagen Business School 2017/18\\
+Hand in date: 20th December 2017\\
+XX Normal pages, XX.XXX Characters\\
+
+\begin{tabu} to 0.8\textwidth { | X[l] | X[c] | }
+   \hline
+   \textbf{Name} & \textbf{CBS-Mail} \\
+    \hline
+   Mads Jørgsholm Bierrings  & mabi15ad@students.cbs.dk \\
+    \hline
+   Morten Brandt Nilsson  & moni15xx@students.cbs.dk \\
+    \hline
+   Lukas Akbar Monssen   & lumo15ab@students.cbs.dk \\
+    \hline
+\end{tabu}
+\\\\
+Note: all references in this report regarding contents, bibliography, appendix, figures, illustrations and tables are clickable. 
 
 \newpage
 \tableofcontents*
 \thispagestyle{empty}
-%\addtocontents{toc}{~\hfill\textbf{Side}\par}
 
 \mainmatter 
 
 \chapter{Introduction}
-\section{Application}
-\input{Introduction/Application}
+\section{Introduction}
+\input{Introduction/Introduction}
 
-\chapter{Market environment - Lukas}
-\section{Market Analysis}
-\input{MarketEnvironment/marketAnalysis.tex}
+\chapter{Market environment}
+\label{Market}
+\input{MarketEnvironment/Introduction.tex}
 
 \chapter{Innovation strategies}
-\section{Innovation strategies}
-\section{How do we enact these strategies?}
-\section{Contributors}
-\section{Input from contributors}
+\input{InnovationStrategies/strategy.tex}
 
-\chapter{Value proposition - Mads}
+
+\chapter{Value proposition}
+\label{ValueProposition}
 \section{Capability}
 \input{ValueProposition/Capability.tex}
 \section{Impact}
@@ -51,44 +72,79 @@
 \input{ValueProposition/Cost.tex}
 
 \chapter{Value adding activities}
+\input{ValueAddingActivities/ValueAddingActivities.tex}
 
 \chapter{User tasks}
+\section{User Tasks}
+\input{UserTasks/userTasks.tex}
+\section{Task-focused Interface}
+\input{UserTasks/task-focusedInterface.tex}
 
 \chapter{Design sketches}
+\section{HCI}
+\input{DesignSketches/HCI.tex}
 
-\chapter{Key innovative featuresskipper.mbn94@gmail.com}
-
+\chapter{Key innovative features}
 
 \chapter{Data handling}
+\input{DataHandling/DataHandling.tex}
 
 \chapter{Business model}
+\input{BusinessModel/guidelines.tex}
 
 \chapter{Commercial challenges}
+\input{CommercialChallenges/RiskAnalysis.tex}
 
 \chapter{Screenshots}
 
+% Kildeliste - brug \cite{} ved henvisning
 \begingroup
 	\raggedright
 	\printbibliography
 \endgroup 
 
-
+% Bilag - brug \ref{} ved henvisning
 \appendix
+
 \chapter{Appendix}
-\section{Screenshot}
-\label{Screenshot}
-\input{Appendix/LauritzQXLScreenshots.tex}
 
+\section{Positioning Map}
+\label{PositioningMap}
+\input{Appendix/PositioningMap.tex}
+\newpage
 
-\section{Level of market saturation}
-Text of Appendix A is Here
+\section{Visitors at museums in Denmark}
+\label{Visitors}
+\input{Appendix/VisitorsMuseums.tex}
+\newpage
 
-\section{Business Models}
-\label{Hejsa}
-Text of Appendix B is Here
+\section{Service blueprints}
+\label{ServiceBlueprint}
+\input{Appendix/Blueprint.tex}
 
-\section{Market Analysis}
-Markets demands goes here. 
+\section{Screenshots from the application}
+\label{AppScreenshots}
+\input{Appendix/AppScreenshots.tex}
+\newpage
 
+\section{Business models}
+\label{BusinessModels}
+\input{Appendix/BusinessModels.tex}
+
+\section{Horizontal prototype}
+\label{HorizontalPrototype}
+\input{Appendix/HorizontalPrototype/HorizontalPrototype.tex}
+
+\section{Task-Focused Interface}
+\label{TaskFocusedInterface}
+\input{Appendix/TaskFocusedInterface.tex}
+
+\section{Commercial Challenges}
+\label{CommercialChallenges}
+\input{Appendix/CommercialChallenges.tex}
+
+\section{Personas}
+\label{Personas}
+\input{Appendix/Personas.tex}
 
 \end{document}
