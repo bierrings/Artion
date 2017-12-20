@@ -8,25 +8,31 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{graphicx}
+\usepackage{titling}
+
+
+\setlength{\droptitle}{-5em}
+
 
 \newcommand{\forceindent}{\leavevmode{\parindent=1em\indent}}
 
 \addbibresource{references.bib} %Tilføjer kildeliste
 
+\date{}
 \begin{document}
 
-\title{Artion}
-\maketitle
-
-\section*{Innovation and new technology}
+\begin{center}
+\includegraphics[width=9cm]{Logo.png}
+\end{center}
+\subsection*{Innovation and new technology}
 
 Business Administration and Information Systems, HA(it.) \\
-5th semester exam report\\
-Teachers: Chee -Wee Tan\\
-Excercise tutor: Albert Fei Liu\\
-Copenhagen Business School 2017/18\\
+5th Semester exam report\\
+Professor MSO: Chee-Wee Tan\\
+PhD fellow: Albert Fei Liu\\
+Copenhagen Business School 2017/2018\\
 Hand in date: 20th December 2017\\
-XX Normal pages, XX.XXX Characters\\
+14.7 Normal pages, 33.523 Characters\\
 
 \begin{tabu} to 0.8\textwidth { | X[l] | X[c] | }
    \hline
@@ -34,13 +40,13 @@ XX Normal pages, XX.XXX Characters\\
     \hline
    Mads Jørgsholm Bierrings  & mabi15ad@students.cbs.dk \\
     \hline
-   Morten Brandt Nilsson  & moni15xx@students.cbs.dk \\
+   Morten Brandt Nilsson  & moni15ac@students.cbs.dk \\
     \hline
    Lukas Akbar Monssen   & lumo15ab@students.cbs.dk \\
     \hline
 \end{tabu}
 \\\\
-Note: all references in this report regarding contents, bibliography, appendix, figures, illustrations and tables are clickable. 
+Note: all references in this report regarding contents, bibliography, appendix, footnotes, figures, illustrations and tables are clickable. 
 
 \newpage
 \tableofcontents*
@@ -49,19 +55,15 @@ Note: all references in this report regarding contents, bibliography, appendix, 
 \mainmatter 
 
 \chapter{Introduction}
-\section{Introduction}
 \input{Introduction/Introduction}
 
 \chapter{Market environment}
 \label{Market}
 \input{MarketEnvironment/Introduction.tex}
 
-\chapter{Innovation strategies}
-\input{InnovationStrategies/strategy.tex}
-
-
 \chapter{Value proposition}
 \label{ValueProposition}
+\input{ValueProposition/Introduction.tex}
 \section{Capability}
 \input{ValueProposition/Capability.tex}
 \section{Impact}
@@ -69,22 +71,18 @@ Note: all references in this report regarding contents, bibliography, appendix, 
 \section{Proof}
 \input{ValueProposition/Proof.tex}
 \section{Cost}
+\label{Cost}
 \input{ValueProposition/Cost.tex}
 
 \chapter{Value adding activities}
 \input{ValueAddingActivities/ValueAddingActivities.tex}
 
 \chapter{User tasks}
-\section{User Tasks}
 \input{UserTasks/userTasks.tex}
-\section{Task-focused Interface}
-\input{UserTasks/task-focusedInterface.tex}
 
-\chapter{Design sketches}
-\section{HCI}
+\chapter{Human-computer interaction}
+\label{HCI}
 \input{DesignSketches/HCI.tex}
-
-\chapter{Key innovative features}
 
 \chapter{Data handling}
 \input{DataHandling/DataHandling.tex}
@@ -95,7 +93,8 @@ Note: all references in this report regarding contents, bibliography, appendix, 
 \chapter{Commercial challenges}
 \input{CommercialChallenges/RiskAnalysis.tex}
 
-\chapter{Screenshots}
+\chapter{Conclusion}
+\input{Conclusion.tex}
 
 % Kildeliste - brug \cite{} ved henvisning
 \begingroup
@@ -113,20 +112,29 @@ Note: all references in this report regarding contents, bibliography, appendix, 
 \input{Appendix/PositioningMap.tex}
 \newpage
 
-\section{Visitors at museums in Denmark}
+\section{Visitors at art museums in Denmark}
 \label{Visitors}
 \input{Appendix/VisitorsMuseums.tex}
+\newpage
+
+\section{Screenshots of competitors platforms}
+\label{CompetitorsPlatforms}
+\input{Appendix/ScreenshotsCompetitorsPlatforms/ScreenshotsCompetitors.tex}
 \newpage
 
 \section{Service blueprints}
 \label{ServiceBlueprint}
 \input{Appendix/Blueprint.tex}
 
-\section{Screenshots from the application}
+\section{Screenshot of the auction-grid in the vertical prototype}
 \label{AppScreenshots}
 \input{Appendix/AppScreenshots.tex}
 \newpage
 
+\section{The two domains}
+\label{Two domians}
+\input{Appendix/twodomains.tex}
+\newpage
 \section{Business models}
 \label{BusinessModels}
 \input{Appendix/BusinessModels.tex}
@@ -146,5 +154,9 @@ Note: all references in this report regarding contents, bibliography, appendix, 
 \section{Personas}
 \label{Personas}
 \input{Appendix/Personas.tex}
+
+\section{Vertical prototype}
+\label{FullVerticalPrototype}
+\input{Appendix/VerticalPrototype/VerticalPrototype.tex}
 
 \end{document}
